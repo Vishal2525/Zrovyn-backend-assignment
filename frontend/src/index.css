@@ -1,0 +1,231 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode body */
+body {
+  background-color: #f8fafc;
+  color: #111827;
+}
+
+.dark body {
+  background-color: #0a0e1a;
+  color: #f3f4f6;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #374151;
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+}
+
+.dark .glass-card {
+  background: rgba(26, 31, 46, 0.8);
+  border: 1px solid rgba(55, 65, 81, 0.3);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -4px rgba(0, 0, 0, 0.2);
+}
+
+/* Primary Button */
+.btn-primary {
+  background: linear-gradient(to right, #6366f1, #4f46e5);
+  color: white;
+  font-weight: 600;
+  padding: 0.625rem 1.5rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s;
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.25);
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #4f46e5, #4338ca);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Secondary Button */
+.btn-secondary {
+  background: #f3f4f6;
+  color: #374151;
+  font-weight: 500;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.dark .btn-secondary {
+  background: #1e293b;
+  color: #e5e7eb;
+}
+
+.btn-secondary:hover {
+  background: #e5e7eb;
+}
+
+.dark .btn-secondary:hover {
+  background: #334155;
+}
+
+/* Danger Button */
+.btn-danger {
+  background: linear-gradient(to right, #ef4444, #dc2626);
+  color: white;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.75rem;
+  transition: all 0.2s;
+  box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.25);
+  border: none;
+  cursor: pointer;
+}
+
+/* Input Field */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  color: #111827;
+  transition: all 0.2s;
+  font-size: inherit;
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: #9ca3af;
+}
+
+.dark .input-field {
+  background: #1a1f2e;
+  border-color: #374151;
+  color: #f3f4f6;
+}
+
+.dark .input-field::placeholder {
+  color: #6b7280;
+}
+
+.input-field:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.125rem 0.625rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge-admin {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+.dark .badge-admin {
+  background: rgba(124, 58, 237, 0.15);
+  color: #c4b5fd;
+}
+
+.badge-analyst {
+  background: #dbeafe;
+  color: #2563eb;
+}
+.dark .badge-analyst {
+  background: rgba(37, 99, 235, 0.15);
+  color: #93c5fd;
+}
+
+.badge-viewer {
+  background: #dcfce7;
+  color: #16a34a;
+}
+.dark .badge-viewer {
+  background: rgba(22, 163, 74, 0.15);
+  color: #86efac;
+}
+
+.badge-active {
+  background: #d1fae5;
+  color: #059669;
+}
+.dark .badge-active {
+  background: rgba(5, 150, 105, 0.15);
+  color: #6ee7b7;
+}
+
+.badge-inactive {
+  background: #fee2e2;
+  color: #dc2626;
+}
+.dark .badge-inactive {
+  background: rgba(220, 38, 38, 0.15);
+  color: #fca5a5;
+}
+
+.badge-income {
+  background: #d1fae5;
+  color: #059669;
+}
+.dark .badge-income {
+  background: rgba(5, 150, 105, 0.15);
+  color: #6ee7b7;
+}
+
+.badge-expense {
+  background: #ffe4e6;
+  color: #e11d48;
+}
+.dark .badge-expense {
+  background: rgba(225, 29, 72, 0.15);
+  color: #fda4af;
+}
